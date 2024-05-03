@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 #container {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	width: 60%;
 	margin: 0 auto;
-	margin-top: 20px;
+	
+	margin-bottom: 20px;
 	padding: 0 20px;
 	display: flex;
 	flex-direction: column;
@@ -12,10 +13,14 @@
     justify-content: center;
 }
 
-h3 {
+#container > h3 {
+	width: 100%;
 	padding: 20px;
 	text-align: center;
 	font-weight: bold;
+	border-bottom: 1px solid #D9D9D9;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .login-form {
@@ -73,5 +78,43 @@ h3 {
 	width: 100%;
 	color: white;
 }
+
+.social {
+    text-align: center; /* 요소들을 가운데 정렬합니다. */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.social-label {
+    position: relative;
+    padding: 0 10px; /* 선과 레이블 사이의 간격을 조절합니다. */
+    color: #787878;
+    font-size:small;
+}
+
+.social-line {
+    width: 50%; /* 선의 길이를 조절합니다. */
+    height: 1px; /* 선의 높이를 조절합니다. */
+    background-color: #787878; /* 선의 색상을 지정합니다. */
+    position: absolute;
+    top: 50%; /* 선을 레이블의 중앙에 위치시킵니다. */
+}
+
+.social-line:first-child {
+    right: 100%; /* 첫 번째 선을 레이블 왼쪽에 배치합니다. */
+    margin-right: 10px; /* 오른쪽 여백을 추가하여 레이블과의 간격을 조절합니다. */
+}
+
+.social-line:last-child {
+    left: 100%; /* 두 번째 선을 레이블 오른쪽에 배치합니다. */
+    margin-left: 10px; /* 왼쪽 여백을 추가하여 레이블과의 간격을 조절합니다. */
+}
+
 
 

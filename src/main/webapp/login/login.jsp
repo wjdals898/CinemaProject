@@ -36,6 +36,11 @@
 					<a class="find-auth" href="">아이디/비밀번호 찾기</a>
 				</div>
 				<button type="button" class="btn" id="loginBtn">로그인</button>
+				<div class="social">
+					<p class="social-line"></p>
+					<p class="social-label">소셜로그인</p>
+					<p class="social-line"></p>
+				</div>
 			</div>
 		</div>
 	</section>
