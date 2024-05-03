@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.header {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#img {
+	padding: 0;
+}
+
+img {
+	width: auto;
+	margin: 0;
+}
+.parentBtn {
+	display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.parentBtn .btn {
+	width: 30%;
+	border: 2px solid #A40033;
+	border-radius: 40px;
+	color: #A40033;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.navbar {
+	border-top: 2px solid #A40033;
+	border-bottom: 5px solid #A40033;
+	margin: 0 auto;
+	> div {
+		width: 60%;
+	}
+}
+#navbar {
+	display: flex;
+	width: 100%;
+}
+
+.nav-item {
+	flex: 1;
+  	/*text-align: center;*/
+	/*margin-right: 50px;*/
+}
+
+.nav-item:last-child {
+	flex: 0 0 40%;
+}
+
+#nav-menu {
+	color: black;
+	font-weight: 600;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-left: 1px solid #D9D9D9;
+  padding: 0 10px;
+}
+
+#search .form-control {
+  flex: 1; /* 입력란이 가능한 최대한의 너비를 차지하도록 설정 */
+  border: 0;
+}
+
+#search a {
+  margin-left: 10px; /* 입력란과 아이콘 사이의 간격 조절 */
+}
+
+
+
