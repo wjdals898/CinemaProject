@@ -1,15 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<header>
+<script>
+	function signupBtnOnclick(){
+		location.href="${initParam['path']}/auth/signup.jsp";
+	}
+	function loginBtnOnclick() {
+		location.href="${initParam['path']}/auth/login.jsp";
+	}
+</script>
+<header id="header">
 	<div class="p-3 header">
 		<div class="row">
 		  <div id="img" class="col-lg-6 col-sm-5">
-		    <img alt="logo" src="../static/images/logo1_5x.png">
+		  	<a href="${initParam['path']}/">
+		    	<img alt="logo" src="${initParam['path']}/static/images/logo1_5x.png" id="logo">
+		    </a>
 		  </div>
 		  <div class="parentBtn col-lg-6 col-sm-7">
-		    <button type="button" class="btn">회원가입</button>
-		    <button type="button" class="btn">로그인</button>
+		    <button type="button" class="btn" onclick="signupBtnOnclick();">회원가입</button>
+		    <button type="button" class="btn" onclick="loginBtnOnclick();">로그인</button>
 		  </div>
 		</div>
 	</div>

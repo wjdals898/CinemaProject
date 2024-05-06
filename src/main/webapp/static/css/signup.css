@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#content {
+	height : auto;
+  	min-height: 100%;
+  	padding-bottom: 150px;
+  	padding-top: 180px;
+}
+
+#container {
+	width: 35%;
+	margin: 0 auto;
+	
+	/* margin-bottom: 20px; */
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container > h3 {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid #D9D9D9;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.signup-form {
+	width: 100%;
+    align-items: center;
+}
+
+.signup-form .right-align {
+	width: 100%;
+	font-size: small;
+	font-weight: 600;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+span {
+	color: #A40033;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.fieldset {
+	margin-bottom: 10px;
+	align-items: center;
+	display: flex;
+}
+
+.fieldset > label {
+	display: inline-block;
+	width: 30%;
+}
+
+.fieldset > input[class~=form-control] {
+	width: 45%;
+	display: inline-block;
+	border-radius: 15px;
+}
+
+.fieldset > input[class~=form-control]:hover {
+	border-color: rgba(164,0,51,.25);
+	box-shadow: 0 0 0 .25rem rgba(164,0,51,.25);
+}
+
+.fieldset > input[class~=form-control]:focus {
+	border-color: rgba(164,0,51,.25);
+	box-shadow: 0 0 0 .25rem rgba(164,0,51,.25);
+}
+
+#duplication_btn {
+	background-color: #4E5174;
+	color: white;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+#duplication_btn:hover {
+	background-color: #787878;
+	/* color: white; */
+}
+
+.fieldset #duplication {
+	display: inline-block;
+	text-align: right;
+	flex: 1;
+}
+
+.username-content {
+	font-size: small;
+	color: #787878;
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.blank {
+    flex: 0 0 30%; /* 30%의 너비를 차지하도록 설정 */
+}
+
+.username-content p {
+    flex: 1; /* 남은 공간을 p 요소가 차지하도록 설정 */
+}
+
+.gender-buttons {
+	width: 45%;
+    display: flex;
+    justify-content: space-between; /* 버튼을 가로로 나란히 배치 */
+}
+
+.gender-buttons button {
+	width: 48%;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.gender-buttons button:hover {
+    background-color: #787878;
+    color: white;
+}
+
+.gender-buttons button.selected {
+    background-color: #A40033;
+    color: white;
+}
+
+.agreement-content {
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.agreement-content > label {
+    display: inline-block;
+}
+
+.agreement-content div input[type="checkbox"]{
+	display: inline-block;
+    cursor: pointer;
+}
+
+.agreement-content div input[type="checkbox"]:hover {
+	box-shadow: 0 0 0 .25rem rgba(13, 110, 253, 0.25);
+}
+
+.agreement-content div {
+	margin-bottom: 5px;
+}
+
+.agreement-content div:nth-child(1){
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.form-buttons {
+	width: 100%;
+	display: flex;
+    justify-content: space-between; /* 버튼을 가로로 나란히 배치 */
+    margin: 20px 0px;
+}
+
+.form-buttons button, .form-buttons input {
+	width: 48%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#prevBtn {
+	background-color: #787878;
+	color: white;
+}
+
+#signupBtn {
+	background-color: #A40033;
+	color: white;
+}

@@ -1,18 +1,23 @@
 @charset "UTF-8";
 
-footer {
-	position: fixed;
+#footer {
+	/* height: 100px; */
+	
+	position: relative;
 	bottom: 0;
+	transform : translateY(-100%);
 	width: 100%;
 	text-align: center;
 	background-color: #F4F4F4;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 .footer {
 	width: 40%;
-	text-align: left;
+	text-align: center;
 	margin: 0 auto;
-	
 }
 
 .footer p {

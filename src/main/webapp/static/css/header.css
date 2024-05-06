@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+#header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+	background-color: white;
+}
+
 .header {
 	width: 60%;
 	margin: 0 auto;
@@ -7,10 +15,11 @@
 
 #img {
 	padding: 0;
+	cursor: pointer;
 }
 
 img {
-	width: auto;
+	/* width: auto; */
 	margin: 0;
 }
 .parentBtn {
@@ -25,6 +34,12 @@ img {
 	color: #A40033;
 	font-weight: bold;
 	margin-left: 10px;
+	cursor: pointer;
+}
+
+.parentBtn button:hover {
+	background-color: #A40033;
+    color: white;
 }
 
 .navbar {
