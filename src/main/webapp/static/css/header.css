@@ -42,6 +42,33 @@ img {
     color: white;
 }
 
+.user-menu-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬을 원할 경우 */
+  cursor: pointer;
+  margin-left: 20px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  color: #787878;
+  font-weight: bold;
+  text-decoration: none;
+  > i {
+  	font-size: large;
+  	padding-top: 10px;
+  	margin-bottom: 10px;
+  }
+  > span {
+  	font-size: x-small;
+  }
+}
+
+.user-menu-wrap:hover {
+	background-color: #F5F5F5;
+	color: #A40033;
+	font-weight: 900;
+}
+
 .navbar {
 	border-top: 2px solid #A40033;
 	border-bottom: 5px solid #A40033;

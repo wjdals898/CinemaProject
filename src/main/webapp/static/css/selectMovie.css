@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.movieOuterWrap {
+    width: 100%;
+    overflow-y: scroll;
+}
+.movieInnerWrap {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+.movieOuterWrap::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+} /*스크롤바 숨기는 css*/
+
+.swiper-container {
+	width: 100%;
+}
+.swiper-slide {
+	width: fit-content;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.movieInnerWrap > .movieDiv {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px 0px;
+}
+
+.movieDiv:not(:last-child){
+	margin-right: 40px;
+}
+
+.movieDiv img {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+
+.movieTitle {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}

@@ -98,6 +98,18 @@ span {
 	flex: 1;
 }
 
+#password_msg {
+	display: none;
+	padding-left: 10px;
+}
+
+.password-content {
+	color: #A40033;
+	font-size: small;
+	font-weight: bold;
+	display: flex;
+}
+
 .username-content {
 	font-size: small;
 	color: #787878;

@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#content {
+	height : auto;
+  	min-height: 100%;
+  	padding-top: 180px;
+  	padding-bottom: 150px;
+}
+
+#container {
+	width: 60%;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	border-bottom: 1px solid #D9D9D9;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.title > h3 {
+	display: inline-block;
+	padding: 10px 20px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.title > p {
+	display: inline-block;
+	text-align: center;
+	color: #787878;
+	margin: 0;
+}
+
+.sect-movie {
+	width: 100%;
+}
+.movieOuterDiv {
+	width: 100%;
+    text-align: center;
+}
+.movieDiv {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px 0px;
+}
+@media (min-width: 700px) {
+    .movieOuterDiv {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 1000px) {
+    .movieOuterDiv {
+        width: 33.333%;
+        float: left;
+    }
+}
+
+/* 미디어 쿼리: 992px 이상의 화면 */
+@media (min-width: 1300px) {
+    .movieOuterDiv {
+        width: 25%;
+    }
+} 
+.movieDiv img {
+	width: 180px;
+	height: 260px;
+	margin-bottom: 10px;
+}
+
+.movieTitle {
+	width: 182px;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.movieSub  {
+	width: 150px;
+	text-align: center;
+	margin-bottom: 10px;
+	> span{
+		display: inline-block;
+	}
+}
+
+.movieSub > span:nth-child(1) {
+	width: 70%;
+	text-align: left;
+}
+.movieSub > spanp:nth-child(2) {
+	width: 30%;
+	font-size: 1.2em;
+	color: #787878;
+	text-align: right;
+}
+
+.movieDiv > button {
+	width: 50%;
+	background-color: rgba(164,0,51,0.55);
+	border-radius: 20px;
+	color: white;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 3px 10px;
+}
+
+.movieDiv > button:hover {
+	background-color: rgba(164,0,51,1);
+	color: white;
+}
+.movieSub > span:nth-child(2) {
+	cursor: pointer;
+}
+.movieSub > span:nth-child(2):hover {
+	color: #A40033;
+}
+
+.movieSub span i.fa-solid {
+	color: #A40033;
+}
