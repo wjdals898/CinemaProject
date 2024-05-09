@@ -1,58 +1,154 @@
 @charset "UTF-8";
 
-.movieOuterWrap {
+/* .movieOuterWrap {
     width: 100%;
-    overflow-y: scroll;
+    height: 80%;
+    display: block;
 }
 .movieInnerWrap {
     display: flex;
-    flex-direction: row;
-    width: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    align-items: center;
+    
 }
 .movieOuterWrap::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-} /*스크롤바 숨기는 css*/
+  display: none; Chrome, Safari, Opera
+} 스크롤바 숨기는 css
 
-.swiper-container {
-	width: 100%;
-}
-.swiper-slide {
-	width: fit-content;
-}
 
-.swiper-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-}
 
 .movieInnerWrap > .movieDiv {
-	width: fit-content;
+	width: 280px;
+	height: fit-content;
 	display: flex;
+	flex: 0 0 auto;
 	align-items: center;
-	flex-direction: column;
-	padding: 10px 0px;
+	justify-content: center;
+	padding: 10px 10px;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin: 10px;
+} */
+
+/* @media (min-width: 450px) {
+    .movieDiv {
+        width: 90%;
+        float: left;
+    }
 }
 
-.movieDiv:not(:last-child){
-	margin-right: 40px;
+@media (min-width: 1000px) {
+    .movieDiv {
+        width: 45%;
+        float: left;
+    }
 }
+
+@media (min-width: 1200px) {
+    .movieDiv {
+        width: 30%;
+        float: left;
+    }
+} */
 
 .movieDiv img {
-	height: 50px;
-	width: 50px;
+	height: 80px;
+	width: 80px;
 	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.movie-sub-wrap {
+	width: calc(100% - 90px);
+	padding: 10px;
 }
 
 .movieTitle {
 	font-size: 1.1em;
 	font-weight: bold;
 	margin-bottom: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
+
+.theater_count {
+	margin-bottom: 5px;
+}
+
+.buttonsWrap {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.buttonsWrap > button {
+	width: 20%;
+	background-color: #787878;
+	color: white;
+	font-weight: bold;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.buttonsWrap > button:disabled {
+	background-color: #787878;
+	color: white;
+}
+
+.movieOuterWrap {
+	width: 100%;
+	height: 85%;
+	display: block;
+}
+.movieInnerWrap {
+	height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    text-align: center;
+}
+.movieDiv {
+	width: 280px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+	justify-content: center;
+	padding: 10px 10px;
+	border: 1.5px solid rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	margin: 10px;
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+.movieDiv:hover {
+	background-color: rgba(78, 81, 116, 0.3);
+	opacity: 0.8;
+}
+
+.movieInnerWrap::-webkit-scrollbar-thumb {
+    background: rgba(78,81,116,0.5); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+.movieInnerWrap::-webkit-scrollbar {
+    width: 10px;  
+    height: 90%;
+}
+.movieInnerWrap::-webkit-scrollbar-track {
+    background: rgba(78,81,116,0.2);  /*스크롤바 뒷 배경 색상*/
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+

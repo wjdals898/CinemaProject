@@ -21,6 +21,10 @@ public class MovieService {
 	public List<MovieDTO> searchByTitle(String title) {
 		return movieDao.searchByTitle(title);
 	}
+	
+	public MovieDTO selectById(int id) {
+		return movieDao.selectById(id);
+	}
 
 	public int addMovie(MovieDTO newMovie) {
 		return movieDao.addMovie(newMovie);

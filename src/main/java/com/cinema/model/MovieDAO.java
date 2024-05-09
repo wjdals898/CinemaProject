@@ -77,6 +77,27 @@ public class MovieDAO {
 		return movieList;
 	}
 	
+	public MovieDTO selectById(int id) {
+		MovieDTO movie = null;
+		conn = DBUtil.dbConnection();
+		String sql = "select * from movies where id=?";
+		try {
+			pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			rs = pst.executeQuery();
+			if(rs.next()) {
+				movie = makeMovie(rs);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			DBUtil.dbDisconnect(conn, pst, rs);
+		}
+		
+		return movie;
+	}
+	
 	public int addMovie(MovieDTO newMovie) {
 		int result = 0;
 		conn = DBUtil.dbConnection();
