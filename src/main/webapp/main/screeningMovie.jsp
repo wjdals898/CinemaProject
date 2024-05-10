@@ -3,7 +3,7 @@
 <div id="container">
 	<div class="title">
 		<h3>상영작</h3>
-		<a href="">
+		<a href="${initParam['path']}/movie/screening">
 			<i class="fa-solid fa-plus"></i>&nbsp;더보기
 		</a>
 	</div>

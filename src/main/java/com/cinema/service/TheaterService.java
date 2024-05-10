@@ -11,17 +11,15 @@ public class TheaterService {
 
 	TheaterDAO theaterDao = new TheaterDAO();
 
-	public List<TheaterDTO> showAll(int movieId) {
-		return theaterDao.showAll(movieId);
+	public List<TheaterDTO> showAll(int movieId, String runningTime) {
+		return theaterDao.showAll(movieId, runningTime);
 	}
 
-	public List<TheaterDTO> showByDate(int movieId, Date selectDate) {
-		return theaterDao.showByDate(movieId, selectDate);
+	public List<TheaterDTO> showByDate(int movieId, String runningTime, Date selectDate) {
+		return theaterDao.showByDate(movieId, runningTime, selectDate);
 	}
 
 	public int addTheater(TheaterDTO newTheater, int movieId) {
 		return theaterDao.addTheater(newTheater, movieId);
 	}
-	
-	
 }

@@ -4,7 +4,7 @@
 <div id="container">
 	<div class="title">
 		<h3>전체영화</h3>
-		<a href="${initParam['path']}/movie/allMovie.jsp">
+		<a href="${initParam['path']}/movie/all">
 			<i class="fa-solid fa-plus"></i>&nbsp;더보기
 		</a>
 	</div>

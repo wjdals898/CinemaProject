@@ -10,8 +10,8 @@ import lombok.ToString;
 @Getter@Setter
 public class TheaterDTO {
 	private int id;
-	/* private MovieDTO movie; */
 	private Date screeningDate;
-	private String screeningTime;
+	private String startTime;
+	private String endTime;
 	private int remainingSeatsCount;
 }
