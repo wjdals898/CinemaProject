@@ -22,8 +22,13 @@ public class MainServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MovieService service = new MovieService();
 		List<MovieDTO> movielist = service.showAll().subList(0, 6);
+		List<MovieDTO> screeninglist = service.showByScreening();
+		if(screeninglist.size()>6) {
+			screeninglist = screeninglist.subList(0, 6);
+		}
 		System.out.println(movielist.size());
 		request.setAttribute("movielist", movielist);
+		request.setAttribute("screeninglist", screeninglist);
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

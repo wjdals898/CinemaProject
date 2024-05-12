@@ -21,9 +21,9 @@ public class DBUtil {
 		Connection conn = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//System.out.println("1. JDBC Driver load 성공");
+			System.out.println("1. JDBC Driver load 성공");
 			conn = DriverManager.getConnection(url,userid, password);
-			//System.out.println("2.Connection 성공");
+			System.out.println("2.Connection 성공");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

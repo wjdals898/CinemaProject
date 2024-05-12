@@ -110,15 +110,17 @@
 }
 .movieInnerWrap {
 	height: 100%;
+	/* width: 100%; */
     width: fit-content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
     text-align: center;
+    align-content: flex-start;
 }
 .movieDiv {
-	width: 280px;
+	width: 270px;
 	height: fit-content;
 	display: flex;
 	align-items: center;

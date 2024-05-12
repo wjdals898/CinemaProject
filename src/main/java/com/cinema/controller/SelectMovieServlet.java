@@ -21,7 +21,7 @@ public class SelectMovieServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MovieService service = new MovieService();
-		List<MovieDTO> movielist = service.showAll();
+		List<MovieDTO> movielist = service.showByScreening();
 		System.out.println(movielist.size());
 		request.setAttribute("movielist", movielist);
 		request.getRequestDispatcher("selectMovie.jsp").forward(request, response);

@@ -69,6 +69,28 @@ public class TheaterDAO {
 		
 		return theaterList;
 	}
+	
+	public TheaterDTO showById(int theaterId, String runningTime) {
+		TheaterDTO theater = null;
+		conn = DBUtil.dbConnection();
+		String sql = "select * from theaters "
+				+ "where id = ?";
+		
+		try {
+			pst = conn.prepareStatement(sql);
+			pst.setInt(1, theaterId);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				theater = makeTheater(rs, runningTime);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBUtil.dbDisconnect(conn, pst, rs);
+		}
+		
+		return theater;
+	}
 
 	private TheaterDTO makeTheater(ResultSet rs, String runningTime) throws SQLException {
 		TheaterDTO theater = new TheaterDTO();

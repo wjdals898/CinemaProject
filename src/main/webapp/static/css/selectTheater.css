@@ -147,6 +147,11 @@
 	padding: 10px;
 }
 
+.select-theater-wrap > .no-theater-message {
+	width: 100%;
+	text-align: center;
+}
+
 .screening-time {
 	display: inline-block;
 	height: fit-content;
@@ -155,12 +160,13 @@
 
 .screening-time p {
 	margin: 0;
-	> span {
-		color: #1D9BF7;
-	}
 }
 
-.screening-time p:first-child {
+.screening-time p span {
+	color: #1D9BF7;
+}
+
+.screening-time .time {
 	border: 1.5px solid black;
 	border-radius: 10px;
 	padding: 3px 10px;

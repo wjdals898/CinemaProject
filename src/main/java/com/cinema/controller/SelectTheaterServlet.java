@@ -74,6 +74,8 @@ public class SelectTheaterServlet extends HttpServlet {
 		cal.setTime(today);
 		cal.add(cal.DATE, selectIndex);
 		Date selectDate = DateUtil.getSQLDate2(cal.getTime());
+		System.out.println("선택한 날짜 : "+selectDate.toString());
+		response.getWriter().append(selectDate.toString());
 		List<TheaterDTO> theaterlist = service.showByDate(movieId, movie.getRunningTime(), selectDate);
 		System.out.println(theaterlist);
 		request.setAttribute("theaterlist", theaterlist);

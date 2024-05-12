@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+.seatOuterWrap {
+	width: 100%;
+	height: calc(100% - 20px);
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.seatOuterWrap::-webkit-scrollbar {
+	display: none;
+}
+
+.seatOuterWrap > a {
+	width: 100%;
+	height: 10%;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-left: 10px;
+	color: black;
+	font-weight: bold;
+	display: block;
+}
+
+.seat-container {
+	display: flex;
+	width: 100%;
+	height: 90%;
+}
+
+.seat-left-content {
+	width: 65%;
+	height: 100%;
+	padding: 0 10px 10px 10px;
+	align-items: center;
+	
+}
+
+.seat-table {
+	width: 100%;
+	height: 90%;
+	background-color: #F4F4F4;
+	padding: 10px 10px 20px 10px; 
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	
+	flex: 0 0 auto;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.seat-table > p {
+	width: 80%;
+	height: 10%;
+	text-align: center;
+	background-color: rgba(217,217,217,0.8);
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-bottom: 3px;
+	font-size: 1.5em;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seats-wrap {
+	width: 90%;
+	height: 90%;
+	display: flex;
+}
+
+.row-num {
+	width: 10%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-right: 10px;
+}
+
+.row-num > p {
+	height: calc(100% / 6);
+	font-size: 1.1em;
+	margin: 3px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat-num {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.seat-row {
+	height: calc(100% / 6);
+	display: flex;
+	flex-direction: row;
+}
+
+.seat-row > p {
+	width: calc(10% - 3px);
+	margin: 5px;
+	background-color: #787878;
+	color: white;
+	border-radius: 10px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.seat-row > .soldout {
+	background-color: rgba(120,120,120,0.3);
+	cursor: default;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.seat-row > p:not(.soldout):hover {
+	opacity: 0.6;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.seat-right-content {
+	width: 35%;
+	height: 90%;
+	/*text-align: center;*/
+	padding: 10px;
+	display : flex;
+	flex-direction: column;
+}
+
+.reservationInfo {
+	width: 100%;
+	height: 60%;
+	padding-left: 15px;
+}
+
+.reservationInfo .movie-title {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+.reservationInfo .remaining-seat {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-bottom: 5px;
+	> span {
+		color: #1D9BF7;
+	}
+}
+
+.reservationInfo .date {
+	font-size: 1.1em;
+	margin-bottom: 30px;
+}
+
+.reservationInfo .select-seat {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.buttonsWrap {
+	width: 100%;
+	height: 40%;
+}
+
+.buttonsWrap > button {
+	width: 80%;
+	background-color: #787878;
+	color: white;
+	font-weight: bold;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.buttonsWrap > button:disabled {
+	background-color: #787878;
+	color: white;
+}
+
+.modal_box {
+	width: 400px;
+	height: 300px;
+	background-color: white;
+	margin: 0 auto;
+	padding: 30px;
+	display: none;
+	flex-flow: column;
+	position: absolute;
+	top: 50%;
+	left : 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99999;
+	border-radius: 20px;
+}
+
+.modal_box > p {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+.modal_box > p:nth-child(1) {
+	font-size: 1.5em;
+	font-weight: bold;
+	border-bottom: 1.5px solid #A40033;
+}
+.modal_box > p:nth-child(2) {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-top: 5px;
+}
+
+.modal-button-group {
+	width: 95%;
+	display: flex;
+	margin: 0 auto;
+	margin-top: 30px;
+	align-items: center;
+	flex-flow: row;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.modal-button-group > button {
+	width: 48%;
+	align-self: center;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 3px 0;
+	color: white;
+	font-weight: bold;
+}
+
+.modal-button-group > button:nth-child(1) {
+	background-color: #787878;
+}
+
+.modal-button-group > button:nth-child(2) {
+	background-color: #C75353;
+}
+
+.modal_bg{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 99;
+}
+
+
+
+
+
