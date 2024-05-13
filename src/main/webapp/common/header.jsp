@@ -29,7 +29,7 @@
 		  			<i class="fa-solid fa-arrow-right-from-bracket fa-2xl"></i>
 		  			<span>로그아웃</span>
 		  		</a>
-		  		<a class="user-menu-wrap">
+		  		<a class="user-menu-wrap" href="mypage.do">
 		  			<i class="fa-regular fa-user fa-2xl"></i>
 		  			<span>마이페이지</span>
 		  		</a>

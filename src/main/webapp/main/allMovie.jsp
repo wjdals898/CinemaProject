@@ -18,7 +18,8 @@
 						<span>예매율 ${movie.theaters_count}%</span>
 						<span><i class="fa-regular fa-heart"></i></span>
 					</p>
-					<button type="button" class="btn">예매하기</button>
+					<button type="button" class="btn" id="reservationBtn">예매하기</button>
+					<input type="hidden" class="movieId" value="${movie.id}">
 				</div>
 			</c:forEach>
 		</div>

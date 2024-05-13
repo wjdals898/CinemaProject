@@ -16,6 +16,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="${initParam['path']}/static/js/jquery-3.7.1.min.js"></script>
 <script src="https://kit.fontawesome.com/4e5b2f86bb.js" crossorigin="anonymous"></script>
+<script>
+	$(function(){
+		$("#reservationBtn").on("click", f_reservationBtn_click);
+		$("#reservationBtn2").on("click", f_reservationBtn_click);
+	});
+	
+	function f_reservationBtn_click(){
+		var movieId = $(this).siblings(".movieId").val();
+		console.log(movieId);
+		location.href="reservation/theater?movieId="+movieId;
+	}
+</script>
 </head>
 <body>
 	<c:set var="path" value="${pageContext.request.servletContext.contextPath}/board" />

@@ -18,6 +18,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="${initParam['path']}/static/js/jquery-3.7.1.min.js"></script>
 <script src="https://kit.fontawesome.com/4e5b2f86bb.js" crossorigin="anonymous"></script>
+<script>
+	$(function(){
+		$("#reservationBtn").on("click", f_reservationBtn_click);
+	});
+	
+	function f_reservationBtn_click(){
+		var movieId = $(this).siblings(".movieId").val();
+		location.href="../reservation/theater?movieId="+movieId;
+	}
+</script>
 </head>
 <body>
 	<jsp:include page="${contextParam['path']}/common/header.jsp"></jsp:include>
@@ -37,7 +47,8 @@
 								<span>예매율 ${movie.theaters_count}%</span>
 								<span><i class="fa-regular fa-heart"></i></span>
 							</p>
-							<button type="button" class="btn">예매하기</button>
+							<button type="button" class="btn" id="reservationBtn">예매하기</button>
+							<input type="hidden" class="movieId" value="${movie.id}">
 						</div>
 					</div>
 				</c:forEach>
